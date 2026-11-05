@@ -1,0 +1,14 @@
+services:
+  seismic-mcp:
+    build: .
+    image: seismic-mcp-server:0.1.0
+    container_name: seismic-mcp
+    ports:
+      - "8000:8000"
+    environment:
+      TZ: Asia/Bangkok              # "today" for the TMD tools
+      LOG_LEVEL: info
+      # MCP_AUTH_TOKEN: change-me   # set this to require "Authorization: Bearer <token>"
+      # MCP_ALLOWED_ORIGINS: https://example.com   # browser origins allowed besides localhost
+      # MCP_STATELESS: "true"       # don't issue or require Mcp-Session-Id
+    restart: unless-stopped

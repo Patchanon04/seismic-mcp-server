@@ -1,0 +1,5 @@
+httpx==0.28.1
+jsonschema==4.24.0
+starlette==0.46.2
+uvicorn==0.34.3
+tzdata==2025.2
